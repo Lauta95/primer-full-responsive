@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ---- Header ---- */
+
+header {
+    background-color: #00357d;
+    color: #6cd9c6;
+    padding: 15px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+header h1 {
+    text-align: center;
+}
+
+header ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+header a{
+    text-align: center;
+}
+
+body{
+    background-image: linear-gradient(to right, #380036, #0CBABA);
+    font-family: 'Kanit', sans-serif;
+}
+
+/* ---- main ---- */
+
+
+
+main {
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    min-height: 100vh;
+}
+
+@media(min-width: 768px){
+    main{
+        display: grid;
+        grid-template-columns: repeat(2, 48%);
+        grid-template-rows: 50px 250px 500px;
+
+        grid-template-areas: 
+        "title title"
+        "imagen imagen-dos"
+        "video video"
+        "descripcion review"
+        "tips tips"
+        ;
+    }
+
+    
+
+    section{
+        height: 100%;
+    }
+
+    .imagen{
+        height: 100%;
+    }
+
+    .imagen-dos{
+        height: 100%;
+    }
+
+    .video{
+        height: 100%;
+    }
+
+    
+}
+
+@media(min-width: 1200px){
+
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    main{
+        margin: 50px;
+
+        display: grid;
+        grid-template-columns: repeat(3, 32.4%);
+        grid-template-rows: 50px repeat(2, 250px) 500px;
+
+        grid-template-areas: 
+        "title title title"
+        "imagen descripcion descripcion"
+        "imagen-dos review review"
+        "video video tips"
+        ;
+    }
+
+    .video{
+        height: 100%;
+    }
+
+    .descripcion{
+        overflow: auto;
+    }
+
+}
+
+main img {
+    width: 100%;
+    height: 100%;
+}
+
+section{
+    border: 3px solid rgba(0, 0, 0, 0.478);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 10px 10px 20px black;
+}
+
+.titulo {
+    background-color: aqua;
+    text-align: center;
+
+    grid-area: title;
+}
+
+.imagen{
+    grid-area: imagen;
+}
+
+.imagen-dos{
+    grid-area: imagen-dos;
+}
+
+.descripcion {
+    background-color: blueviolet;
+    /* height: 200px;
+    overflow: auto; */
+
+    grid-area: descripcion;
+}
+
+.review {
+    background-color: brown;
+    /* height: 200px;
+    overflow: auto; */
+
+    grid-area: review;
+}
+
+.tips {
+    background-color: cadetblue;
+    /* height: 200px; */
+    overflow: auto;
+
+    grid-area: tips;
+}
+
+.video{
+    grid-area: video;
+}
+
+.video iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* ---- footer ---- */
+
+footer {
+    background-color: #00357d;
+    color: #6cd9c6;
+    padding: 1em 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
